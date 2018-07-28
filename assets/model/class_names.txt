@@ -1,0 +1,7 @@
+octagon
+triangle
+square
+hexagon
+star
+circle
+line
