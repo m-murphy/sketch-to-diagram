@@ -1,4 +1,4 @@
-import { CanvasConfig, SVGCanvas } from './components/canvas';
+import { CanvasConfig, SketchCanvas } from './components/canvas';
 import { Component, ChangeDetectionStrategy, ElementRef, SimpleChanges, OnChanges, OnInit, Output, EventEmitter } from '@angular/core';
 import * as d3 from 'd3';
 
@@ -18,20 +18,19 @@ import * as d3 from 'd3';
 export class SketchDiagramComponent implements OnChanges, OnInit {
 
   private canvasConfig: CanvasConfig;
-  private canvas: SVGCanvas;
+  private canvas: SketchCanvas;
 
   @Output() pathEmitter: EventEmitter<[number, number]> = new EventEmitter();
 
   constructor(private elementRef: ElementRef) {}
 
   render() {
-    console.log("Rendering");
     d3.select(this.elementRef.nativeElement).select('#sketch-diagram-canvas').select('*').remove();
     this.canvasConfig = {
       container: d3.select(this.elementRef.nativeElement).select('#sketch-diagram-canvas'),
       pathEmitter: this.pathEmitter
     };
-    this.canvas = new SVGCanvas(this.canvasConfig);
+    this.canvas = new SketchCanvas(this.canvasConfig);
   }
 
   ngOnInit() {

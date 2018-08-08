@@ -27,8 +27,10 @@
     "@ngrx/store-devtools": "^6.0.1",
     "@tensorflow/tfjs": "^0.12.3",
     "@types/d3": "^5.0.0",
+    "@types/fabric": "^1.5.40",
     "core-js": "^2.5.4",
     "d3": "^5.5.0",
+    "fabric": "^2.3.3",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },
