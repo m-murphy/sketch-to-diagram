@@ -1,9 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
-/tmp
-/out-tsc
+/sketch-to-diagram-js/dist
+/sketch-to-diagram-js/tmp
+/sketch-to-diagram-js/out-tsc
 
 # dependencies
 /sketch-to-diagram-js/node_modules
